@@ -2,10 +2,20 @@ import random
 
 def play():
     choices = ["rock", "paper", "scissors"]
-    user = input("Choose rock, paper, or scissors:  ").lower()
-    if user not in choices:
-        print("Invalid choice. Try again")
-        return
+    print("\n--- It's your turn. Choose from this menu (1-3): ---")
+    print("1. Rock")
+    print("2. Paper")
+    print("3. Scissors")
+    user_choice = input("Which one do you choose? (enter the number)  ")
+
+    if user_choice == "1":
+        user = "rock"
+    elif user_choice == "2":
+        user = "paper"
+    elif user_choice == "3":
+        user = "scissors"
+    else:
+        print("Invalid selection.")
     
     computer = random.choice(choices)
     print(f"Computer choice: {computer}")
